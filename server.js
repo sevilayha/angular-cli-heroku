@@ -8,7 +8,7 @@ const express = require('express'),
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(compression());
 app.use((req, res, next) => {
-  if (req.headers['x-forwarded-proto'] == 'http') {
+  if (req.headers['x-forwarded-proto'] != 'https') {
     const host = req.get('Host');
     const url  = `https://${host}${req.url}`;
     return res.redirect(url);
