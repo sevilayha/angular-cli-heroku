@@ -6,6 +6,7 @@ const express = require('express'),
 // settings
 app.use(express.static(__dirname + '/dist'));
 
+
 // routes
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 
