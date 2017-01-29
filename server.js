@@ -1,7 +1,7 @@
 const express = require('express'),
   app         = express(),
   path        = require('path'),
-  port        = process.env.port || 8080;
+  port        = process.env.PORT || 8080;
 
 // settings
 app.use(express.static(__dirname + '/dist'));
